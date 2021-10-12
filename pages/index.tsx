@@ -11,7 +11,7 @@ const index = () => {
         Web Development
       </h6>
       <div
-        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-black-100"
+        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h4 className="my-3 text-xl font-semibold tracking-wide">
@@ -22,7 +22,7 @@ const index = () => {
           {/* children's initial and animate property should be same as the parent during a stagger effect  */}
           {services.map((service) => (
             <div
-              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-500 md:col-span-1 "
+              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
               key={service.title}
             >
               <ServiceCard service={service} />

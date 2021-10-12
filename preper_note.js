@@ -1,9 +1,10 @@
 import { FunctionComponent } from "react";
-import { Service } from "../type";
+import { interface } from "../type";
 
-const ServiceCard: FunctionComponent<{ service: Service }> = ({
-  service: { Icon, title, about },
+const ServiceCard: FunctionComponent<{ object_followinterface: interface }> = ({
+  object_followinterface: { Icon, title },
 }) => {
+    
    function createMarkup() {
       return {
          __html: about,
@@ -22,6 +23,3 @@ const ServiceCard: FunctionComponent<{ service: Service }> = ({
 };
 
 export default ServiceCard;
-
-
-
