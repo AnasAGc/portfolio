@@ -41,14 +41,14 @@ const Sidebar = () => {
       </a>
 
       <div className="flex justify-between w-9/12 mx-auto my-6 text-green md:w-full">
-        <a href="https://github.com/AnasAGc">
-          <AiFillGithub className="w-8 h-8 cursor-pointer" />
+        <a href="https://github.com/AnasAGc"aria-label='Github'>
+          <AiFillGithub className="w-8 h-8 cursor-pointer"  />
         </a>
-        <a href="https://www.linkedin.com/in/anas-abughalieh-68b73a194/">
+        <a href="https://www.linkedin.com/in/anas-abughalieh-68b73a194/"aria-label='Linkedin' >
           {" "}
           <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
         </a>
-        <a href="http://fb.com/anax0x">
+        <a href="http://fb.com/anax0x"aria-label='FaceBook' >
           <AiFillFacebook className="w-8 h-8 cursor-pointer" />
         </a>
       </div>
