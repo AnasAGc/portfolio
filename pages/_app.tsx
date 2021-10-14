@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps,router }) {
   return (
     <ThemeProvider attribute="class">
        <Head>
-        <title>Anas Resume</title>
+        <title>Anas Portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
     <div className='grid grid-cols-12 gap-6 px-5 my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-36 xl:px-48 ' >
