@@ -2,6 +2,9 @@ import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { GiTie } from "react-icons/gi";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import {cv} from '../data'
+
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
   const changeTheme = () => {
@@ -9,9 +12,14 @@ const Sidebar = () => {
   };
   return (
     <div>
-      <img
+      <Image
         src="https://bit.ly/3mAAb9V"
-        className="w-32 h-32 mx-auto rounded-full "
+        className="mx-auto rounded-full "
+        height="500"
+        width="500"
+        layout='intrinsic'
+        quality="100"
+        
         alt="Anas Abu Galieha "
       />
       <h3 className="my-6 text-3xl font-medium tracking-wider font-kaushan">
@@ -24,8 +32,8 @@ const Sidebar = () => {
       </p>
 
       <a
-        href="/assets/Sumit Dey Resume.pdf"
-        download="Sumit Dey Resume.pdf"
+        href={cv.path}
+        download="Anas AbuGhalieh - Resume"
         className="flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full cursor-pointer dark:bg-dark-200 dark:bg-black-500"
       >
         <GiTie className="w-6 h-6" />

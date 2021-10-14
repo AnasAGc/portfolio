@@ -1,11 +1,18 @@
 import Bar from "../components/Bar";
 import { languages, tools } from "../data";
-
+import { motion } from "framer-motion";
+import { fadeInUp, routeFade } from "../animations";
 const resume = () => {
   return (
-    <div className="px-6 py-2">
+    <motion.div
+      variants={routeFade}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      className="px-6 py-2"
+    >
       <div className="grid gap-6 md:grid-cols-2">
-        <div>
+        <motion.div variants={fadeInUp} initial={"initial"} animate={"animate"}>
           <h5 className="my-3 text-2xl font-bold ">Education</h5>
           <div>
             <h5 className="my-3 text-xl font-bold ">
@@ -22,21 +29,21 @@ const resume = () => {
               web Developer, looking to add value to this community.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={fadeInUp} initial={"initial"} animate={"animate"}>
           <h5 className="my-3 text-2xl font-bold ">Experience</h5>
           <div>
             <h5 className="my-3 text-xl font-bold "> Team Leader. </h5>
             <p className="font-semibold"> Action Against Hunger | ACF-USA </p>
             <p className="my-4">
               responsible for overseeing and supervising the staff, day-to-day
-              activities, and operations of technical staff. Manages and reports
+              activities, and operations. Manages and reports
               relevant key performance indicators. Regularly directs the work of
               at least three or more full-time employees.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* languages*/}
@@ -58,7 +65,7 @@ const resume = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

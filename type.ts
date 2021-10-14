@@ -19,6 +19,7 @@ export interface Tools {
 }
 
 export interface IProject {
+   id:number;
    name: string;
    description: string;
    image_path: string;
@@ -28,4 +29,4 @@ export interface IProject {
    key_techs: string[];
  }
  
- export type Category = "react" | "node" | "express" | "django" | "mongo";
+ export type Category = "react" | "node" | "express" | "django" | "mongo"|"vanilla"|"ml"|"python";

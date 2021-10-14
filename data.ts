@@ -20,7 +20,7 @@ export const services:Service[] =[
         Icon: FaServer,
         title: 'Backend  Development',
         about:
-           'handle database, server, api using <b>Express </b> & other popular frameworks',
+           'handle database, server, api using <b>Express </b>,<b>Django </b> & other popular frameworks',
      },
      {
         Icon: AiOutlineApi,
@@ -42,9 +42,9 @@ export const services:Service[] =[
      },
      {
         Icon: RiComputerLine,
-        title: 'Whatever',
+        title: 'Analytical Skills',
         about:
-           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!',
+           'Define problems and finding best solution for them ',
      },
 ]
 
@@ -52,17 +52,17 @@ export const languages: Skill[] = [
    {
      Icon: BsCircleFill,
      name: "Python",
-     level: "45",
+     level: "70",
    },
    {
      Icon: BsCircleFill,
      name: "Java Script",
-     level: "60",
+     level: "80",
    },
    {
      Icon: BsCircleFill,
      name: "React Native",
-     level: "80",
+     level: "60",
    },
    {
      Icon: BsCircleFill,
@@ -103,36 +103,40 @@ export const languages: Skill[] = [
      level: "45",
    },
  ];
-export const projects: IProject[] = [
-  { 
-    name: "COVID Tracker",
+ export const projects: IProject[] = [
+  {
+    id: 0,
+    name: "Pets Care",
     description:
-      "This app shows a statistical view about corona virus over the world",
-    image_path: "/images/covid.jpg",
-    deployed_url: "https://covid-19-tracker-by-sumit.web.app/",
-    github_url: "https://github.com/Dey-Sumit/covid-19-tracker",
-    category: ["react"],
-    key_techs: ["React", "Chart.js", "Material UI"],
+      "This E-Store for sell and buy Pets ",
+    image_path: "/images/PetStore.jpeg",
+    deployed_url: "https://pets-care.vercel.app/",
+    github_url: "https://github.com/pets-care/pets-care-frontend",
+    category: ["django", "react",'python'],
+    key_techs: ["React", "Django", "Material UI","Next.js","firebase"],
   },
   {
-    name: "Algorithm Visualizer",
-    image_path: "/images/algoVisual.png",
-    deployed_url: "https://visual-algorithm.web.app/",
-    github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
-    category: ["react"],
+    id: 7,
+    name: "Real-Time-Translator",
+    
+    image_path: "/images/Real_Time_Translator.jpeg",
+    deployed_url: "https://telegram.me/TranslatorAb_Bot/",
+    github_url: "https://github.com/real-time-translator/real-time-translator",
+    category: ["python"],
     description:
-      "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
-    key_techs: ["React", "firebase", "Framer Motion"],
+      "Real-Time Translator detects the text, then translates it into the language of your choice",
+    key_techs: ["python", "Telegram Bot "],
   },
 
   {
-    name: "Dev Talks",
-    image_path: "/images/dev.jpg",
-    deployed_url: "https://dev-talks.herokuapp.com/",
-    github_url: "https://github.com/Dey-Sumit/Dev-talks",
+    id: 1,
+    name: "Game Space",
+    image_path: "/images/game_Store.jpeg",
+    deployed_url: "https://quizzical-albattani-91c5ea.netlify.app/",
+    github_url: "https://github.com/Gamers-Team/frontend-gamers",
     category: ["node", "mongo", "react"],
     description:
-      "Social Media app for developers who can share project,create posts,etc...",
+      "E-Store For Gamers Geeks , allow users  buy and sell games stuffs ",
     key_techs: [
       "React",
       "Redux",
@@ -145,43 +149,47 @@ export const projects: IProject[] = [
   },
 
   {
-    name: "Realtime Chat App",
-    image_path: "/images/chatapp.jpg",
-    deployed_url: "https://sumit-chat.netlify.app/",
-    github_url: "https://github.com/Dey-Sumit/chat-app-socket.io-react-node",
+    id: 2,
+    name: "City Explorer",
+    image_path: "/images/CityExploror.jpeg",
+    deployed_url: "https://city-explor.netlify.app/",
+    github_url: "https://github.com/AnasAGc/city-explorer",
+    //TODO type on category
     category: ["node", "react"],
     description:
-      "Basic Realtime Chat App where one can create a room can talk to each other",
+      "simple website help to get information about city and the climate ",
     key_techs: ["React", "Node", "Express", "Socket", "Bootstrap"],
   },
 
   {
-    name: "Tweeter Clone",
-    image_path: "/images/tweetme.jpg",
-    deployed_url: "http://sumaxtweetme.pythonanywhere.com/",
-    github_url: "https://github.com/Dey-Sumit/tweetme",
-    category: ["django", "react"],
+    id: 3,
+    name: "Ethar",
+    image_path: "/images/Ethar.jpeg",
+    deployed_url: "https://ethar-team.github.io/ethar/",
+    github_url: "https://github.com/Ethar-Team/ethar",
+    category: ["vanilla"],
     description:
       "First Django Project :) | Typical Social Media App where one can post,like ,comment etc",
-    key_techs: ["React", "Django", "Django REST API"],
+    key_techs: ["vanilla", "BootStrap"],
   },
-
+  
   {
-    name: "Color Classification using tf.js",
-    image_path: "/images/color.jpg",
-    deployed_url: "!#",
-    github_url: "https://github.com/Dey-Sumit/color-classification",
-    category: ["express"],
-    description:
-      "Tried ML with JS :) | this app classifies a color using CNN algorithm in browser",
-    key_techs: ["Express", "TensorFlow.js", "Vanilla js"],
+    id: 4,
+    name: "Anas Portfolio",
+    image_path: "/images/portfolio.jpg",
+    deployed_url: "",
+    category: ["react"],
+    github_url: "https://github.com/AnasAGc/portfolio",
+    description: "Hey, You are seeing this project now...Enjoy",
+    key_techs: ["Next.js", "Framer Motion", "TypeScript", "Tailwind"],
   },
   {
+    id: 6,
     name: "YouTube using YouTube ",
     image_path: "/images/youtubeClone.png",
     deployed_url: "https://not-utube.web.app/",
-    github_url: "https://github.com/Dey-Sumit/youtube-clone-tutorial-up",
-    category: ["express"],
+    github_url: "",
+    category: ["express", "ml"],
     description:
       'Full(almost) Functional YouTube replica where one can login with his/her youtube account to enjoy "not-YouTube".User can like a video,comment on a video & Much More ',
     key_techs: [
@@ -194,13 +202,17 @@ export const projects: IProject[] = [
     ],
   },
   {
+    id: 9,
     name: "Football App",
+    //TODO add image,github,dep url
     image_path: "/images/football.png",
     deployed_url: "https://o-my-goal.web.app/",
-    github_url: "https://github.com/Dey-Sumit/football-app",
+    github_url: "",
     category: ["react"],
     description:
       "o my goal replica where an user can keep an eye on his favorite club.This app will keep providing \n all the statistics of that club.all the fans can also chat ",
     key_techs: ["React", "Redux", "Firebase Auth", "API", "Sass", "Bootstrap"],
   },
 ];
+
+export const cv={path:'/assets/Anas AbuGhalieh - Resume.pdf'}

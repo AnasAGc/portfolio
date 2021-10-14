@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { fadeInUp, routeFade, stagger } from "../animations";
 import ProjectCard from "../components/ProjectCard";
 import ProjectNavbar from "../components/ProjectNavbar";
 import { projects as projectsData } from "../data";
@@ -7,6 +9,8 @@ import { Category } from "../type";
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("All");
+  const [showDetail, setShowDetail] = useState<number|null>(null);
+ 
 
   const handleFilterCategory = (category: Category | "all") => {
     if (category === "all") {
@@ -24,24 +28,37 @@ const Projects = () => {
   };
 
   return (
-    <div className="px-5 py-2 overflow-y-scroll " style={{ height: "90vh" }}>
+    <motion.div
+      variants={routeFade}
+      initial="initial"
+      animate="animate"
+      exit='exit'
+      className="px-5 py-2 overflow-y-scroll "
+      style={{ height: "90vh" }}
+    >
       <ProjectNavbar
         handlerFilterCategory={handleFilterCategory}
         active={active}
       />
-      <div className="relative grid grid-cols-12 gap-4 my-3">
+      <motion.div
+        variants={stagger}
+        initial={"initial"}
+        animate={"animate"}
+        className="relative grid grid-cols-12 gap-4 my-3"
+      >
         {/* <AnimatePresence> */}
         {projects.map((project) => (
-          <div
+          <motion.div
+            variants={fadeInUp}
             key={project.name}
-            className="col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-black-200 sm:col-span-6 lg:col-span-4"
+            className="col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 sm:col-span-6 lg:col-span-4"
           >
-            <ProjectCard project={project} key={project.name} />
-          </div>
+            <ProjectCard project={project} key={project.name} showDetail={showDetail} setShowDetail={setShowDetail} />
+          </motion.div>
         ))}
         {/* </AnimatePresence> */}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
